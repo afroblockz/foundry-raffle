@@ -1,6 +1,27 @@
-## Foundry
+# Random raffle contract
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+## About
+
+This code is to create a proveably random lottery contract lottery.
+
+## What do we want it to do?
+1. Users can enter by buying a ticket
+    1. The ticket fees will go to the winner during the draw
+2. After x period of time the draw will automatically pick a winner
+    1. This will occur programatically
+3. We will utilise Chainlink VRF & Chainlink automation
+    1. Chainlink VRF = Randomness
+    2. Chainlink automation = Time based trigger
+
+## Tests!
+
+1. Writw some deploy scripts
+2. Write our tests
+    1. Work on a local chain
+    2. Forked testnet
+    3. Forked mainnet
+
+## For those not familiar with the Foundry Dev environment
 
 Foundry consists of:
 
@@ -41,6 +62,8 @@ $ forge snapshot
 
 ### Anvil
 
+This will simulate a local chain and provide virtual wallet addresses with Eth Sepolia
+
 ```shell
 $ anvil
 ```
@@ -64,3 +87,12 @@ $ forge --help
 $ anvil --help
 $ cast --help
 ```
+
+### Running foundry
+
+Once Foundry is installed and you are ready to go, run the environment using:
+```bash
+$ foundryup
+```
+
+This will set the environment up and will also pull any updates.
